@@ -53,6 +53,10 @@ void GameSystem::Update()
 
 		player->isTouch_Bottom = false;
 		player->isTouch_Top = false;
+		player->isTouch_right = false;
+		player->isTouch_left = false;
+		player->speed = GRAVITY;
+
 		for (int i = 0; i < tiles.size(); i++)
 		{
 			
@@ -65,20 +69,48 @@ void GameSystem::Update()
 			int tileWidth = tiles[i]->getSize().x;
 			int tileHeight = tiles[i]->getSize().y;
 			
-
-			if (playerX + playerWidth > tileX && playerX < tileX + tileWidth)
+			if (playerX + playerWidth-15 > tileX && playerX+15 < tileX + tileWidth)
 			{
 
 				//bottom
-				if (playerY + playerHeight >= tileY && playerY + playerHeight <= tileY + tileHeight)
+				if(playerY+playerHeight>tileY && playerY+ playerHeight <tileY+tileHeight)
 				{
 					player->setPos(playerX, tileY - playerHeight);
-					player->isJump = false;
 					player->isTouch_Bottom = true;
+					player->isJump = false;
+					player->speed = 0;
+				
+				}
+				if (playerY < tileY + tileHeight && playerY > tileY)
+				{
+					player->setPos(playerX, tileY + tileHeight);
+					player->isTouch_Top = true;
+					player->isJump = false;
 				}
 			}
-			
+
+			playerX = player->getPos().x;
+			playerY = player->getPos().y;
+
+			if (playerY + playerHeight > tileY
+				&& playerY < tileY + tileHeight)
+			{
+
+				if (playerX > tileX && playerX < tileX + tileWidth)
+				{
+					player->setPos(tileX + tileWidth, playerY);
+					player->isTouch_left = true;
+				}
+				if (playerX<tileX && playerX + playerWidth>tileX)
+				{
+					player->setPos(tileX - playerWidth, playerY);
+					player->isTouch_right = true;
+
+				}
+			}
 		}
+
+
 	}
 
 
@@ -96,8 +128,8 @@ void GameSystem::Render()
 
 void GameSystem::MakeGround_Tile(float x, float y)
 {
-	Tile* new_tile = new TileGround(x, y);
-	tiles.push_back(new_tile);
+	Tile* t = new TileGround(x, y);
+	tiles.push_back(t);
 }
 
 void GameSystem::MakeBridge_Tile(float x, float y)
@@ -108,14 +140,16 @@ void GameSystem::MakeBridge_Tile(float x, float y)
 
 void GameSystem::CreateMap()
 {
+
+	MakeGround_Tile(0, START_BOTTOM);
+	MakeGround_Tile(TILE_GROUND_WIDTH, START_BOTTOM);
+	MakeGround_Tile(2*TILE_GROUND_WIDTH, START_BOTTOM);
+	MakeGround_Tile(3*TILE_GROUND_WIDTH, START_BOTTOM);
+	MakeBridge_Tile(3 * TILE_GROUND_WIDTH, START_BOTTOM - 200);
 	
-	MakeGround_Tile(0 * TILE_GROUND_WIDTH, START_BOTTOM);
-	MakeGround_Tile(1 * TILE_GROUND_WIDTH, START_BOTTOM);
-	MakeBridge_Tile(2 * TILE_GROUND_WIDTH, START_BOTTOM-100);
-	/*MakeGround_Tile(1 * TILE_GROUND_WIDTH, START_BOTTOM);
-	MakeGround_Tile(2 * TILE_GROUND_WIDTH, START_BOTTOM);
-	MakeGround_Tile(3 * TILE_GROUND_WIDTH, START_BOTTOM);
-	MakeGround_Tile(4 * TILE_GROUND_WIDTH, START_BOTTOM - 200);*/
+	MakeGround_Tile(4 * TILE_GROUND_WIDTH, START_BOTTOM);
+	MakeGround_Tile(5 * TILE_GROUND_WIDTH, START_BOTTOM);
+	MakeGround_Tile(6 * TILE_GROUND_WIDTH, START_BOTTOM);
 
 }
 
@@ -127,7 +161,7 @@ void GameSystem::deleteData()
 	int size = tiles.size();
 	for (int i = 0; i < size; i++)
 	{
-		tiles.pop_back();
+		//tiles.pop_back();
 	}
 	CreateMap();
 }

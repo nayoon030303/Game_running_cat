@@ -9,10 +9,11 @@ Player::Player()
 {
     width = CAT_NORMAL_WIDTH;
     height = CAT_NORMA_HEIGHT;
-    posX = 110;
+    posX = 20;
     jumpStartPosY = START_BOTTOM;
     posY = jumpStartPosY-height;
-   
+    
+    speed = GRAVITY;
     isDead = false;
     jumpHeight = 0;
     jumpTime = 1.0f;
@@ -24,12 +25,14 @@ Player::Player()
 
     isTouch_Bottom = false;
     isTouch_Top = false;
+    isTouch_left = false;
+    isTouch_right = false;
 }
 
 void Player::Update()
 {
    
-    posY += GRAVITY;
+    posY += speed;
     state_time += 1;
 
    
@@ -42,11 +45,11 @@ void Player::Update()
         }
        
     }
-    if (inputManager.key['A'] == 1)
+    if (inputManager.key['A'] == 1 && !isTouch_left)
     {
         posX -= 10;
     }
-    if (inputManager.key['D'] == 1)
+    if (inputManager.key['D'] == 1 && !isTouch_right)
     {
         posX += 10;
     }

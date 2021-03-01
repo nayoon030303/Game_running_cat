@@ -1,2 +1,23 @@
-﻿  Game_running_cat.cpp
+﻿  game_system.cpp
+C:\Users\qwer1\2021\Game_running_cat\Game_running_cat\Game_running_cat\game_system.cpp(48,21): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\qwer1\2021\Game_running_cat\Game_running_cat\Game_running_cat\game_system.cpp(60,21): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\qwer1\2021\Game_running_cat\Game_running_cat\Game_running_cat\game_system.cpp(63,16): warning C4244: '초기화 중': 'FLOAT'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\qwer1\2021\Game_running_cat\Game_running_cat\Game_running_cat\game_system.cpp(64,16): warning C4244: '초기화 중': 'FLOAT'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\qwer1\2021\Game_running_cat\Game_running_cat\Game_running_cat\game_system.cpp(65,20): warning C4244: '초기화 중': 'FLOAT'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\qwer1\2021\Game_running_cat\Game_running_cat\Game_running_cat\game_system.cpp(66,21): warning C4244: '초기화 중': 'FLOAT'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\qwer1\2021\Game_running_cat\Game_running_cat\Game_running_cat\game_system.cpp(67,14): warning C4244: '초기화 중': 'FLOAT'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\qwer1\2021\Game_running_cat\Game_running_cat\Game_running_cat\game_system.cpp(68,14): warning C4244: '초기화 중': 'FLOAT'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\qwer1\2021\Game_running_cat\Game_running_cat\Game_running_cat\game_system.cpp(69,18): warning C4244: '초기화 중': 'FLOAT'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\qwer1\2021\Game_running_cat\Game_running_cat\Game_running_cat\game_system.cpp(70,19): warning C4244: '초기화 중': 'FLOAT'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\qwer1\2021\Game_running_cat\Game_running_cat\Game_running_cat\game_system.cpp(78,36): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\qwer1\2021\Game_running_cat\Game_running_cat\Game_running_cat\game_system.cpp(78,21): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\qwer1\2021\Game_running_cat\Game_running_cat\Game_running_cat\game_system.cpp(86,36): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\qwer1\2021\Game_running_cat\Game_running_cat\Game_running_cat\game_system.cpp(86,21): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\qwer1\2021\Game_running_cat\Game_running_cat\Game_running_cat\game_system.cpp(92,30): warning C4244: '=': 'FLOAT'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\qwer1\2021\Game_running_cat\Game_running_cat\Game_running_cat\game_system.cpp(93,30): warning C4244: '=': 'FLOAT'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\qwer1\2021\Game_running_cat\Game_running_cat\Game_running_cat\game_system.cpp(101,40): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\qwer1\2021\Game_running_cat\Game_running_cat\Game_running_cat\game_system.cpp(101,27): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\qwer1\2021\Game_running_cat\Game_running_cat\Game_running_cat\game_system.cpp(106,42): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\qwer1\2021\Game_running_cat\Game_running_cat\Game_running_cat\game_system.cpp(106,27): warning C4244: '인수': 'int'에서 'float'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+C:\Users\qwer1\2021\Game_running_cat\Game_running_cat\Game_running_cat\game_system.cpp(121,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
   Game_running_cat.vcxproj -> C:\Users\qwer1\2021\Game_running_cat\Game_running_cat\Debug\Game_running_cat.exe

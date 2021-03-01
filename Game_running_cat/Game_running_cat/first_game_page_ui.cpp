@@ -1,4 +1,5 @@
 #include "global.h"
+#include <tchar.h>
 #include "first_game_page_ui.h"
 
 #define STAGE_UI_WIDTH 1510
@@ -59,6 +60,17 @@ void FirstGamePageUI::Render()
 
 	element->sprite->End();*/
 
+	/*RECT rc;
+	D3DXVECTOR3 pos;
+	D3DXVECTOR3 cen;
+	WCHAR text[256];
+	rc.left = 100;
+	rc.top = 100;
+	text[256];
+	int t = gameSystem.player->posY;
+	_stprintf_s<256>(text, _T("score: %d"), t);
+	font1->DrawText(NULL, text, -1, &rc, DT_NOCLIP,
+		D3DXCOLOR(0.0f, 0.0f, 0.0f, 1.0f));*/
 
 
 }

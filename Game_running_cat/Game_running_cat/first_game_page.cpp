@@ -6,7 +6,6 @@
 FirstGamePage::FirstGamePage()
 {
 	classType = FIRST_GAME_PAGE;
-	gameSystem.CreateMap();
 }
 
 void FirstGamePage::Update()
